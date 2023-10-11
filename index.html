@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Article</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .article {
+            margin: 50px auto;
+            width: 80%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="article">
+        <h1>My Article</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit. Sed euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit.</p>
+        <p>Nullam euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit. Sed euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit.</p>
+        <p>Donec euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit. Sed euismod, velit vel bibendum bibendum, elit elit bibendum elit, vel bibendum elit elit elit.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // jQuery effects
+            $('.article').hide().fadeIn(2000);
+            $('h1').css('color', 'red');
+            $('p').hover(function() {
+                $(this).css('background-color', 'yellow');
+            }, function() {
+                $(this).css('background-color', 'transparent');
+            });
+
+            // jQuery animation
+            $('h1').click(function() {
+                $(this).animate({
+                    fontSize: '50px',
+                    marginTop: '50px'
+                }, 1000);
+            });
+
+            // jQuery event
+            $('p').click(function() {
+                alert('You clicked a paragraph!');
+            });
+        });
+    </script>
+</body>
+</html>
